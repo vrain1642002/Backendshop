@@ -63,8 +63,9 @@ public class DanhmucsanphamController {
 
     @PutMapping("/{Ma}")
     public ResponseEntity<UpdateCategoryResponse> suaDanhmucsanpham(@PathVariable Long Ma, @Valid @RequestBody DanhmucsanphamDTO danhmucsanphamDTO){
-        danhmucsanphamService.capnhatDanhmucsanpham(Ma,danhmucsanphamDTO);
         UpdateCategoryResponse updateCategoryResponse = new UpdateCategoryResponse();
+        danhmucsanphamService.capnhatDanhmucsanpham(Ma,danhmucsanphamDTO);
+
         updateCategoryResponse.setMessage("Cập nhật thành công");
         return ResponseEntity.ok(updateCategoryResponse);
     }
@@ -74,7 +75,7 @@ public class DanhmucsanphamController {
     public ResponseEntity<?> xoaDanhmucsanpham(@PathVariable Long Ma){
           try {
               danhmucsanphamService.xoaDanhmucsanpham(Ma);
-              return ResponseEntity.ok("");
+              return ResponseEntity.ok(String.format(""));
           }catch (Exception e) {
               return ResponseEntity.badRequest().body(e.getMessage());
           }

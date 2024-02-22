@@ -21,6 +21,7 @@ public interface DonhangRepository extends JpaRepository<Donhang, Long> {
 
     @Query("SELECT o FROM Donhang o WHERE o.Trangthai = true AND (:keyword IS NULL OR :keyword = '' OR " +
             "o.Hoten_Nguoinhan LIKE %:keyword% " +
+            "OR o.Sdt_Nguoinhan LIKE %:keyword% " +
             "OR o.Diachigiaohang LIKE %:keyword% " +
             "OR o.Ghichu LIKE %:keyword%)")
     Page<Donhang> findByKeyword(@Param("keyword") String keyword, Pageable pageable);

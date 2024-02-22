@@ -3,12 +3,14 @@ server:
 spring:
   datasource:
 
-    url: jdbc:mysql://viaduct.proxy.rlwy.net:38126/shophandmade
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
-    password: aCddAgF6DA1G2HggCEbGD-ced34gfbgG
-
-
+#    url: jdbc:mysql://localhost:3306/shophandmade
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password:
+      url: jdbc:mysql://viaduct.proxy.rlwy.net:38126/shophandmade
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: aCddAgF6DA1G2HggCEbGD-ced34gfbgG
 #      url: jdbc:mysql://viaduct.proxy.rlwy.net:58827/shophandmade
 #      driver-class-name: com.mysql.cj.jdbc.Driver
 #      username: root

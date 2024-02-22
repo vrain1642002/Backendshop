@@ -52,7 +52,7 @@ public class DonhangService implements IDonhangService{
 //        donhangRepository.save(donhang);
         Donhang donhang=Donhang.builder()
                 .Hoten_Nguoinhan(donhangDTO.getHotenNguoinhan())
-                .sdt_Nguoinhan(donhangDTO.getSDTNguoinhan())
+                .Sdt_Nguoinhan(donhangDTO.getSDTNguoinhan())
                  .Ghichu(donhangDTO.getGhichu())
                  .Tongtien(donhangDTO.getTongtien())
                 .Phuongthucvanchuyen(donhangDTO.getPhuongthucvanchuyen())
