@@ -44,7 +44,7 @@ public class SanphamService implements ISanphamService {
                 .findById(sanphamDTO.getMadanhmucsanpham())
                 .orElseThrow(() ->
                         new KhongtimthaydulieuException(
-                                "Khong tim thay  danh muc san pham co ma = "+sanphamDTO.getMadanhmucsanpham()));
+                                "Không tìm thấy danh mục sản phẩm với mã "+sanphamDTO.getMadanhmucsanpham()));
 
         Sanpham sanphammoi = Sanpham.builder()
                 .ten(sanphamDTO.getTen())
@@ -61,7 +61,7 @@ public class SanphamService implements ISanphamService {
     public Sanpham laySanpham(long Ma) throws Exception {
         return sanphamRepository.findById(Ma).
                 orElseThrow(()-> new KhongtimthaydulieuException(
-                        "Khong tim thay san pham voi ma =" +Ma));
+                        "Không tìm thấy sản phẩm với mã " +Ma));
 
     }
 
@@ -83,7 +83,7 @@ public class SanphamService implements ISanphamService {
                 .findById(sanphamDTO.getMadanhmucsanpham())
                 .orElseThrow(() ->
                         new KhongtimthaydulieuException(
-                                "Khong tim thay danh muc san pham co ma = "+sanphamDTO.getMadanhmucsanpham()));
+                                "KKhông tìm thấy sản phẩm với mã "+sanphamDTO.getMadanhmucsanpham()));
         sanpham.setTen(sanphamDTO.getTen());
         sanpham.setDanhmucsanpham(Danhmucsanpham);
         sanpham.setGia(sanphamDTO.getGia());
@@ -113,7 +113,7 @@ public class SanphamService implements ISanphamService {
                     .findById(Ma)
                     .orElseThrow(() ->
                             new KhongtimthaydulieuException(
-                                    "khong tim thay san pham voi ma "+sanpham_hinhDTO.getMa_Sanpham()));
+                                    "Không tìm thấy danh mục sản phẩm với mã  "+sanpham_hinhDTO.getMa_Sanpham()));
            Sanpham_hinh newSanpham_hinh = Sanpham_hinh.builder()
                     .sanpham(Sanpham)
                     .Diachihinh(sanpham_hinhDTO.getDiachihinh())
@@ -123,7 +123,7 @@ public class SanphamService implements ISanphamService {
             //Ko cho insert quá 4 ảnh cho 1 sản phẩm
             int size = sanpham_hinhRepository.findSanpham_hinhBySanpham(Sanpham).size();
             if(size >= Sanpham_hinh.soluongMax) {
-                throw new GiatrikhonghopleException("So luong hinh <="+ Sanpham_hinh.soluongMax);
+                throw new GiatrikhonghopleException("Số lượng hình <="+ Sanpham_hinh.soluongMax);
             }
              Sanpham.setHinhthunho(newSanpham_hinh.getDiachihinh());
               sanphamRepository.save(Sanpham);

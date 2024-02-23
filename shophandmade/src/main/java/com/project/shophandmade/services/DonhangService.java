@@ -61,7 +61,7 @@ public class DonhangService implements IDonhangService{
                 .build();
         donhang.setNguoidung(nguoidung);
         donhang.setNgaydat( LocalDate.now());
-        donhang.setTrangthaiDH(TrangthaiDH.Dangchuanbi);
+        donhang.setTrangthaiDH(TrangthaiDH.Dangxuly);
          donhang.setTrangthai(true);
          donhangRepository.save(donhang);
 
