@@ -7,11 +7,15 @@ spring:
 #    driver-class-name: com.mysql.cj.jdbc.Driver
 #    username: root
 #    password:
-      url: jdbc:mysql://viaduct.proxy.rlwy.net:38126/shophandmade
+      url: jdbc:mysql://monorail.proxy.rlwy.net:58007/shophandmade
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
-      password: aCddAgF6DA1G2HggCEbGD-ced34gfbgG
-#      url: jdbc:mysql://viaduct.proxy.rlwy.net:58827/shophandmade
+      password: hd24hGG4D26gDfB6eg5bCGdDGEhBD1Cg
+
+
+
+
+  #      url: jdbc:mysql://viaduct.proxy.rlwy.net:58827/shophandmade
 #      driver-class-name: com.mysql.cj.jdbc.Driver
 #      username: root
 #      password: g4BgHHC4BfBd3B4-1AGE42GGdhdb6Gg1
